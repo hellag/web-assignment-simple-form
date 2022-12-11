@@ -9,42 +9,48 @@
 <body>
     <div>
         <form>
-            <label for="fname">Όνομα:</label><br>
-            <input type="text" id="fname" name="fname" value="(Μόνο γράμματα)"><br>
+            <label for="name">Όνομα:</label><br>
+            <input type="text" required="required" id="name" name="name" value="(Μόνο γράμματα)"><br>
             <label for="lname">Επώνυμο:</label><br>
-            <input type="text" id="lname" name="lname" value="(Μόνο γράμματα)"><br><br>
+            <input type="text" required="required" id="lname" name="lname" value="(Μόνο γράμματα)"><br><br>
             <label for="paper_type">Τύπος εγγράφου ταυτότητας:</label><br>
             <select name="paper_type" id="paper_type">
                 <option value="AMKA">ΑΜΚΑ</option>
                 <option value="passport">Διαβατήριο</option>
             </select>
             <label for="lname"></label><br>
-            <input type="text" id="lname" name="lname" value=""><br><br>
-            <label for="lname">Μήνας/Έτος γέννησης:</label><br>
-            <input type="text" id="lname" name="lname" value=""><br><br>
-            <input type="text" id="lname" name="lname" value=""><br><br>
-            <label for="lname">Email:</label><br>
-            <input type="text" id="lname" name="lname" value="(Μορφή Ηλ.Ταχυδρ.)"><br><br>
-            <label for="lname">Διεύθυνση:</label><br>
-            <input type="text" id="lname" name="lname" value=""><br><br>
-            <label for="lname">No:</label><br>
-            <input type="text" id="lname" name="lname" value="Doe"><br><br>
-            <label for="lname">Τ.Κ.:</label><br>
-            <input type="text" id="lname" name="lname" value="Doe"><br><br>
-            <label for="lname">Περιοχή:</label><br>
-            <input type="text" id="lname" name="lname" value="Doe"><br><br>
-            <label for="lname">Προφίλ Ηλικίας:</label><br>
-            <input type="text" id="lname" name="lname" value="(Παρακαλώ επιλέξτε ημερομηνία γέννησης)"><br><br>
-            <label for="lname">Κατηγορία δικαιούχου:</label><br>
-            <input type="text" id="lname" name="lname" value="Doe"><br><br>
-            <label for="lname">PIN(8 Ψηφία - Μόνο αριθμοί):</label><br>
-            <input type="text" id="lname" name="lname" value="Doe"><br><br>
+            <input type="text" required="required" id="lname" name="lname" value=""><br><br>
+            <label for="birth">Μήνας/Έτος γέννησης:</label><br>
+            <input type="text" id="birth_month" name="birth_month" value=""><br><br>
+            <input type="text" id="birth_year" name="birth_year" value=""><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" value="(Μορφή Ηλ.Ταχυδρ.)"><br><br>
+            <label for="address">Διεύθυνση:</label><br>
+            <input type="text" id="address" name="address" value=""><br><br>
+            <label for="street">No:</label><br>
+            <input type="text" id="street" name="street" value=""><br><br>
+            <label for="zip_code">Τ.Κ.:</label><br>
+            <input type="text" id="zip_code" name="zip_code" value=""><br><br>
+            <label for="region">Περιοχή:</label><br>
+            <input type="text" id="region" name="region" value=""><br><br>
+            <label for="age_profil">Προφίλ Ηλικίας:</label><br>
+\            <select name="age_profil" id="age_profil">
+                <option value="0">Παιδιά 7 έως 12 ετών</option>
+                <option value="1">Νέοι 13 έως 18 ετών</option>
+                <option value="2">Ενήλικες</option>
+            </select>
+            <label for="beneficiary">Κατηγορία δικαιούχου:</label><br>
+            <input type="text" id="beneficiary" name="beneficiary" value=""><br><br>
+            <!-- select -->
+            <label for="pin">PIN(8 Ψηφία - Μόνο αριθμοί):</label><br>
+            <input type="password" id="pin" name="pin" value=""><br><br>
             <label for="lname">Επαλήθευση PIN(8 Ψηφία - Μόνο αριθμοί):</label><br>
-            <input type="text" id="lname" name="lname" value="Doe"><br><br>
+            <input type="text" id="lname" name="lname" value=""><br><br>
             <input type="file" id="img" name="img" accept="image/*">
             <!-- save button-->
             <input type="submit" value="Submit">
           </form> 
     </div>
+<script src="js/main.js"></script>
 </body>
 </html>
