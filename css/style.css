@@ -9,11 +9,7 @@
     font-family: roboto-regular;
     box-sizing: border-box;
 }
-.registration{
-    width: 100%;
-    padding: 25px;
-    display: block;
-}
+
 label{
 	margin:0 0 3px 0;
 	padding:10px;
@@ -66,7 +62,7 @@ select:focus{
 	width: 100%;
 }
 input[type=submit], input[type=button], input[type=file]{
-	background: #4B99AD;
+	background: rgb(0, 84, 130);
 	padding: 8px 15px 8px 15px;
 	border: none;
 	color: #fff;
@@ -86,3 +82,12 @@ input[type=submit]:hover, input[type=button]:hover{
     padding: 7px;
 
 } */
+
+
+.registration-child {
+    float:left;
+}
+
+input[type=submit]{
+	margin-top:10px;
+}

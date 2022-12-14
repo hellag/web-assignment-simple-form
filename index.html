@@ -6,70 +6,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <title>Web assignment 1b</title>
 </head>
 
 <body>
     <div class="registration">
-        <form>
-            <label class="required" for="name">Όνομα:</label><br>
-            <input type="text" required="required" id="name" name="name" placeholder="(Μόνο γράμματα)"><br>
-            <label class="required" for="lname">Επώνυμο:</label><br>
-            <input type="text" required="required" id="lname" name="lname" placeholder="(Μόνο γράμματα)"><br><br>
-            <label class="required" for="paper_type">Τύπος εγγράφου ταυτότητας:</label><br>
-            <select name="paper_type" id="paper_type">
-                <option value="AMKA">ΑΜΚΑ</option>
-                <option value="passport">Διαβατήριο</option>
-            </select>
-            <label class="required" for="birth">Μήνας/Έτος γέννησης:</label><br>
-            <select id="birth_month" name="birth_month">
-                <option value="1">Ιανουάριος</option>
-                <option value="2">Φεβρουάριος</option>
-                <option value="3">Μάρτιος</option>
-                <option value="4">Απρίλιος</option>
-                <option value="5">Μάιος</option>
-                <option value="6">Ιούνιος</option>
-                <option value="7">Ιούλιος</option>
-                <option value="8">Αύγουστος</option>
-                <option value="9">Σεπτέμβριος</option>
-                <option value="10">Οκτώβριος</option>
-                <option value="11">Νοέμβριος</option>
-                <option value="12">Δεκέμβριος</option>
-            </select>
-            <input type="text" id="birth_year" name="birth_year" value=""><br><br>
-            <label class="required" for="email">Email:</label><br>
-            <input type="email" id="email" name="email" placeholder="(Μορφή Ηλ.Ταχυδρ.)"><br><br>
-            <label class="required" for="address">Διεύθυνση:</label><br>
-            <input type="text" id="address" name="address" value=""><br><br>
-            <label class="required" for="street">No:</label><br>
-            <input type="text" id="street" name="street" value=""><br><br>
-            <label class="required" for="zip_code">Τ.Κ.:</label><br>
-            <input type="text" id="zip_code" name="zip_code" value=""><br><br>
-            <label class="required" for="region">Περιοχή:</label><br>
-            <input type="text" id="region" name="region" value=""><br><br>
-            <label class="required" for="age_profil">Προφίλ Ηλικίας:</label><br>
-             <select name="age_profil" id="age_profil">
-                <option value="0">Παιδιά 7 έως 12 ετών</option>
-                <option value="1">Νέοι 13 έως 18 ετών</option>
-                <option value="2">Ενήλικες</option>
-            </select>
-            <label class="required" for="beneficiary">Κατηγορία δικαιούχου:</label><br>
-            <select id="beneficiary" name="beneficiary">
-                <optgroup label="Μαθητές/Φοιτητές/Σπουδαστές">
-                  <option>Τριτοβάθμια Εκπαίδευση (ΑΕΙ / ΤΕΙ)</option>
-                </optgroup>
-                <optgroup label="Ειδικές Ομάδες">
-                  <option>ΑΜΕΑ</option>
-                  <option>Άνεργοι</option>
-                </optgroup>
-              </select>
-            <label class="required" for="pin">PIN</label><br>
-            <input type="password" id="pin" name="pin" placeholder="8 Ψηφία - Μόνο αριθμοί" value=""><br><br>
-            <label class="required" for="pin_again">Επαλήθευση PIN</label><br>
-            <input type="password" id="pin_again" name="pin_again" placeholder="8 Ψηφία - Μόνο αριθμοί" value=""><br><br>
-            <input type="file" id="img" name="img" accept="image/*">
-            <!-- save button-->
-            <input type="submit" value="Submit">
+        <form name="myForm" onsubmit="validateForm()">
+            <div class="registration-child">
+                <label class="required" for="name">Όνομα:</label><br>
+                <input type="text" required="required" id="name" name="name" placeholder="(Μόνο γράμματα)"><br>
+                <label class="required" for="lname">Επώνυμο:</label><br>
+                <input type="text" required="required" id="lname" name="lname" placeholder="(Μόνο γράμματα)"><br><br>
+                <label class="required" for="paper_type">Τύπος εγγράφου ταυτότητας:</label><br>
+                <select name="paper_type" id="paper_type">
+                    <option value="AMKA">ΑΜΚΑ</option>
+                    <option value="passport">Διαβατήριο</option>
+                </select>
+                <label class="required" for="birth">Μήνας/Έτος γέννησης:</label><br>
+                <select id="birth_month" name="birth_month">
+                    <option value="1">Ιανουάριος</option>
+                    <option value="2">Φεβρουάριος</option>
+                    <option value="3">Μάρτιος</option>
+                    <option value="4">Απρίλιος</option>
+                    <option value="5">Μάιος</option>
+                    <option value="6">Ιούνιος</option>
+                    <option value="7">Ιούλιος</option>
+                    <option value="8">Αύγουστος</option>
+                    <option value="9">Σεπτέμβριος</option>
+                    <option value="10">Οκτώβριος</option>
+                    <option value="11">Νοέμβριος</option>
+                    <option value="12">Δεκέμβριος</option>
+                </select>
+                <select id="birth_year" name="birth_year">
+                </select>
+                <label class="required" for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="(Μορφή Ηλ.Ταχυδρ.)"><br><br>
+                <div class="registration-grand-child">
+                    <label class="required" for="address">Διεύθυνση:</label><br>
+                    <input type="text" id="address" name="address" value=""><br><br>
+                    <label class="required" for="street">No:</label><br>
+                    <input type="text" id="street" name="street" value=""><br><br>
+                    <label class="required" for="zip_code">Τ.Κ.:</label><br>
+                    <input type="text" id="zip_code" name="zip_code" value=""><br><br>
+                </div>
+            </div>
+            <div class="registration-child">
+                <label class="required" for="region">Περιοχή:</label><br>
+                <input type="text" id="region" name="region" value=""><br><br>
+                <label class="required" for="age_profil">Προφίλ Ηλικίας:</label><br>
+                <select name="age_profil" id="age_profil">
+                    <option value="0">Παιδιά 7 έως 12 ετών</option>
+                    <option value="1">Νέοι 13 έως 18 ετών</option>
+                    <option value="2">Ενήλικες</option>
+                </select>
+                <label class="required" for="beneficiary">Κατηγορία δικαιούχου:</label><br>
+                <select id="beneficiary" name="beneficiary">
+                    <optgroup label="Μαθητές/Φοιτητές/Σπουδαστές">
+                        <option>Τριτοβάθμια Εκπαίδευση (ΑΕΙ / ΤΕΙ)</option>
+                    </optgroup>
+                    <optgroup label="Ειδικές Ομάδες">
+                        <option>ΑΜΕΑ</option>
+                        <option>Άνεργοι</option>
+                    </optgroup>
+                </select>
+                <label class="required" for="pin">PIN</label><br>
+                <input type="password" id="pin" name="pin" placeholder="8 Ψηφία - Μόνο αριθμοί" value=""><br><br>
+                <label class="required" for="pin_again">Επαλήθευση PIN</label><br>
+                <input type="password" id="pin_again" name="pin_again" placeholder="8 Ψηφία - Μόνο αριθμοί"
+                    value=""><br><br>
+            </div>
+            <div class="registration-child">
+                <input type="file" id="img" name="img" accept="image/*"><br/>
+                <input type="submit" value="Αποθήκευση">
+            </div>
         </form>
     </div>
     <script src="js/main.js"></script>
