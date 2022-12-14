@@ -1,82 +1,96 @@
-
 /* body {
 	margin:auto;
 	max-width: 400px;
 	padding: 20px 12px 10px 20px;
 	font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 } */
-*{
-    font-family: roboto-regular;
-    box-sizing: border-box;
+* {
+	font-family: roboto-regular;
+	box-sizing: border-box;
 }
 
-label{
-	margin:0 0 3px 0;
-	padding:10px;
-	display:block;
+label {
+	margin: 0 0 3px 0;
+	padding: 10px;
+	display: block;
 	font-weight: bold;
 }
-input[type=text]::placeholder ,input[type=email]::placeholder {
-    font-style: italic;
+
+input[type=password]::placeholder,
+input[type=text]::placeholder,
+input[type=email]::placeholder {
+	font-style: italic;
 }
-input[type=text], 
+
+input[type=text],
 input[type=date],
 input[type=datetime],
 input[type=email],
+input[type=number],
 input[type=password],
-textarea, 
-select{
+textarea,
+select {
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	border:1px solid #BEBEBE;
+	border: 1px solid #BEBEBE;
 	padding: 7px;
-	margin:0px;
+	margin: 0px;
 	-webkit-transition: all 0.30s ease-in-out;
 	-moz-transition: all 0.30s ease-in-out;
 	-ms-transition: all 0.30s ease-in-out;
 	-o-transition: all 0.30s ease-in-out;
-	outline: none;	
+	outline: none;
 }
-input[type=text]:focus, 
+
+input[type=text]:focus,
 input[type=date]:focus,
 input[type=datetime]:focus,
 input[type=number]:focus,
 input[type=email]:focus,
 input[type=password]:focus,
-textarea:focus, 
-select:focus{
+textarea:focus,
+select:focus {
 	-moz-box-shadow: 0 0 8px #88D5E9;
 	-webkit-box-shadow: 0 0 8px #88D5E9;
 	box-shadow: 0 0 8px #88D5E9;
 	border: 1px solid #88D5E9;
 }
- .field-divided{
+
+.field-divided {
 	width: 49%;
 }
 
-.field-long{
+.field-long {
 	width: 100%;
 }
-.field-select{
+
+.field-select {
 	width: 100%;
 }
-input[type=submit], input[type=button], input[type=file]{
+
+input[type=submit],
+input[type=button],
+input[type=file] {
 	background: rgb(0, 84, 130);
 	padding: 8px 15px 8px 15px;
 	border: none;
 	color: #fff;
 }
-input[type=submit]:hover, input[type=button]:hover{
+
+input[type=submit]:hover,
+input[type=button]:hover {
 	background: #4691A4;
-	box-shadow:none;
-	-moz-box-shadow:none;
-	-webkit-box-shadow:none;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
 }
+
 .required:before {
-    content: "*";
-    color: #AD0000;
+	content: "*";
+	color: #AD0000;
 }
+
 /* @media screen and (max-width: 930px) */
 /* registration{
     padding: 7px;
@@ -85,9 +99,22 @@ input[type=submit]:hover, input[type=button]:hover{
 
 
 .registration-child {
-    float:left;
+	float: left;
 }
 
-input[type=submit]{
-	margin-top:10px;
+button {
+	margin-top: 10px;
+}
+
+input[type=file]::-webkit-file-upload-button {
+	visibility: hidden;
+}
+
+input[type=file]:before {
+	content: 'Μεταμόρφωση φωτογραφίας προσώπου';
+	font-size: 14px;
+	width: 1000px;
+}
+span{
+	color: red;
 }

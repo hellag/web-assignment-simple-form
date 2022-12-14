@@ -11,18 +11,21 @@
 </head>
 
 <body>
+    <div id="error_handling"></div>
     <div class="registration">
-        <form name="myForm" onsubmit="validateForm()">
+        <form name="myForm">
             <div class="registration-child">
                 <label class="required" for="name">Όνομα:</label><br>
                 <input type="text" required="required" id="name" name="name" placeholder="(Μόνο γράμματα)"><br>
                 <label class="required" for="lname">Επώνυμο:</label><br>
                 <input type="text" required="required" id="lname" name="lname" placeholder="(Μόνο γράμματα)"><br><br>
                 <label class="required" for="paper_type">Τύπος εγγράφου ταυτότητας:</label><br>
-                <select name="paper_type" id="paper_type">
+                <select name="paper_type" required="required" id="paper_type">
                     <option value="AMKA">ΑΜΚΑ</option>
                     <option value="passport">Διαβατήριο</option>
                 </select>
+                <label class="required" for="amka">ΑΜΚΑ</label><br>
+                <input type="number" required="required" id="amka" name="amka"><br><br>
                 <label class="required" for="birth">Μήνας/Έτος γέννησης:</label><br>
                 <select id="birth_month" name="birth_month">
                     <option value="1">Ιανουάριος</option>
@@ -78,7 +81,7 @@
             </div>
             <div class="registration-child">
                 <input type="file" id="img" name="img" accept="image/*"><br/>
-                <input type="submit" value="Αποθήκευση">
+                <button type="button" onclick="validateForm()">Αποθήκευση</button>
             </div>
         </form>
     </div>
